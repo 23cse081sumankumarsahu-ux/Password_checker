@@ -4,7 +4,7 @@ A module to evaluate password strength using regex-based rules, scoring, and act
 """
 
 import re
-from typing import Tuple, List, Dict
+from typing import Tuple, List, Dict, Any
 
 
 class PasswordChecker:
@@ -38,7 +38,7 @@ class PasswordChecker:
         """
         self.min_length = min_length
     
-    def check_strength(self, password: str) -> Dict[str, any]:
+    def check_strength(self, password: str) -> Dict[str, Any]:
         """
         Check the strength of a password and return detailed results.
         
@@ -153,7 +153,7 @@ class PasswordChecker:
         return result['score'] >= min_score
 
 
-def check_password(password: str, min_length: int = 8) -> Dict[str, any]:
+def check_password(password: str, min_length: int = 8) -> Dict[str, Any]:
     """
     Convenience function to check password strength.
     
